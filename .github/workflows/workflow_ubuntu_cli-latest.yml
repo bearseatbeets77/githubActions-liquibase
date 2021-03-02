@@ -46,6 +46,7 @@ jobs:
           ./liquibase/liquibase --defaultsFile=./H2_project/liquibase.properties --logLevel="${{ github.event.inputs.logLevel }}" status --verbose
           ./liquibase/liquibase --defaultsFile=./H2_project/liquibase.properties --logLevel="${{ github.event.inputs.logLevel }}" updateSQL
           ./liquibase/liquibase --defaultsFile=./H2_project/liquibase.properties --logLevel="${{ github.event.inputs.logLevel }}" update
+          ./liquibase/liquibase --defaultsFile=./H2_project/liquibase.properties --logLevel="${{ github.event.inputs.logLevel }}" snapshot
           
           echo "Tags: ${{ github.event.inputs.tags }}" 
           
